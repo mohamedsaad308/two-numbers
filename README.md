@@ -72,12 +72,20 @@ Example :
 
 ```json
 POST /api/two-numbers
-with json = {
-    "num1": 1000,
-    "num2": 12
+```
+
+with json:
+
+```json
+{
+  "num1": 1000,
+  "num2": 12
 }
+```
+
 Returns
 
+```json
 {
   "results": {
     "addition": 1012.0,
