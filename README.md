@@ -104,3 +104,33 @@ To run the tests, run
 ```
 python test_app.py
 ```
+
+## Notice
+
+The numbers are converted to floats, which may cause some limitations and floating number errors. Check here
+[Floating Point Arithmetic: Issues and Limitations](https://docs.python.org/3/tutorial/floatingpoint.html)
+
+for example if the input is:
+
+```json
+{
+  "num1": 0.1,
+  "num2": 0.2
+}
+```
+
+The output will be
+
+```json
+{
+  "results": {
+    "addition": 0.30000000000000004, #should be 0.3
+    "division": 0.5,
+    "multiplication": 0.020000000000000004, #should be 0.02
+    "substraction": -0.1
+  },
+  "success": true
+}
+```
+
+Though this shouldn't cause much of a problem with results, and can be matigated using [decimal](https://docs.python.org/3/library/decimal.html#module-decimal)
