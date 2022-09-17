@@ -9,6 +9,14 @@ class AppTestCase(unittest.TestCase):
             self.app = create_app()
             self.client = self.app.test_client
 
+    def test_405_method_not_allowed(self):
+        res = self.client().get('/api/two-numbers')
+        data = json.loads(res.data)
+
+        self.assertEqual(res.status_code, 405)
+        self.assertEqual(data['success'], False)
+        self.assertEqual(data['message'], 'method not allowed')
+
     def test_400_non_number_input(self):
         res = self.client().post(
             '/api/two-numbers',

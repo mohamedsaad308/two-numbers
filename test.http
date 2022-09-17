@@ -3,6 +3,11 @@ POST http://127.0.0.1:5000/api/two-numbers HTTP/1.1
 content-type: application/json
 
 {
-    "num1": 15451541555,
-    "num2": "5"
+    "num1": 1000,
+    "num2": 12
 }
+###
+
+GET http://127.0.0.1:5000/api/two-numbers HTTP/1.1
+content-type: application/json
+
