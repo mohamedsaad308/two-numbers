@@ -70,7 +70,7 @@ The API returns 2 error types when a request fails:
 
 Example :
 
-```json
+```bash
 POST /api/two-numbers
 ```
 
